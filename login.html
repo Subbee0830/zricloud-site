@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sign in — ZriCloud</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Mono:wght@500&display=swap">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="Ram Infosys home">
+      <img class="logo" src="assets/logo-mark.png" alt="" width="44" height="46">
+      <span class="wordmark"><span class="wm-name">Ram Infosys</span><span class="wm-tag">Infinite Possibilities</span></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html">ZriCloud home</a>
+    </nav>
+  </div>
+</header>
+
+<main class="auth">
+  <div class="auth-card">
+    <p class="eyebrow">ZriCloud console</p>
+    <h1>Sign in</h1>
+    <p class="auth-sub">For existing ZriCloud customers.</p>
+
+    <!-- PLACEHOLDER: this form sends nothing anywhere.
+         Replace it with a link or redirect to the live ZriCloud console when it is attached. -->
+    <form id="signin" novalidate>
+      <div class="field">
+        <label for="email">Work email</label>
+        <input id="email" name="email" type="email" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+      </div>
+      <div class="auth-row">
+        <span></span>
+        <a href="index.html#contact">Forgot password?</a>
+      </div>
+      <button class="btn btn-solid" type="submit">Sign in</button>
+    </form>
+    <p class="notice" id="notice" hidden role="status">The ZriCloud console is being connected to this address. Existing customers can continue to use their current console link, or contact Ram Infosys support.</p>
+    <p class="auth-foot">Need access? <a href="index.html#contact">Contact Ram Infosys</a></p>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-row">
+    <p>&copy; 2026 Ram Infosys Private Limited. ZriCloud is a product of Ram Infosys.</p>
+  </div>
+</footer>
+
+<script>
+  // Placeholder only: nothing typed here is stored or transmitted.
+  document.getElementById('signin').addEventListener('submit', function (e) {
+    e.preventDefault();
+    document.getElementById('password').value = '';
+    document.getElementById('notice').hidden = false;
+  });
+</script>
+</body>
+</html>
